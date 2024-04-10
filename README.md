@@ -3,7 +3,7 @@
 ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/96f1d514-19b0-4b34-97f1-0627885fb888)
 
 <h2>Project Summary:</h2>
-This project highlights the role of NSGs in Microsoft Azure Virtual Machines and how I used a protocol analyzer application (Wireshark), to inspect the flow of network traffic between virtual machines/networks. 
+This project highlights the role of NSGs in Microsoft Azure Virtual Machines and how I used a protocol analyzer application (Wireshark), to inspect the flow of network traffic between virtual machines and the internet. 
 
 <h2>Environments, Applications and Technologies Used:</h2>
 
@@ -32,3 +32,5 @@ NSGs or Network Security Groups are essentially firewalls within virtual network
 - I also pinged www.google.com to display and observe the ICMP data packets transmitted between the Windows VM (10.0.0.4) and Google's IP address (142.250.200.36).
   ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/a7179c2e-0893-4ccd-bdef-ce075c512003)
 
+- I accessed the Linux VM's NSG on Microsoft Azure and added a new 'inbound security rule' to deny all inbound ICMP traffic. Thus configuring the access control list/firewall. I also set the priority to a lower number (higher priority) ensuring that this rule is followed first.
+  ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/3ceaa35e-664e-4154-8ad9-39d4f299f625)
