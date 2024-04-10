@@ -29,7 +29,7 @@ NSGs or Network Security Groups are essentially firewalls within virtual network
 - From the Windows 10 VM, I ran Microsoft PowerShell as administrator and proceeded to ping the Linux VM with its private IP address 10.0.0.4. By doing this, I captured the raw data packets being sent from the Windows 10 VM to the Linux VM on Wireshark.
   ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/8cef79fc-44f3-40c4-a2ce-68fccf6e8b06)
   
-- I also pinged www.google.com to display and observe the ICMP data packets transmitted between the Windows VM (10.0.0.4) and Google's IP address (142.250.200.36).
+- I also pinged 'www.google.com' to display and observe the ICMP data packets transmitted between the Windows VM (10.0.0.4) and Google's IP address (142.250.200.36).
   ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/a7179c2e-0893-4ccd-bdef-ce075c512003)
 
 - I accessed the Linux VM's NSG on Microsoft Azure and added a new 'inbound security rule' to deny all inbound ICMP traffic. Thus configuring the access control list/firewall. I also set the priority to a lower number (higher priority) ensuring that this rule is followed first.
