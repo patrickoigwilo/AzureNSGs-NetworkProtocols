@@ -34,3 +34,9 @@ NSGs or Network Security Groups are essentially firewalls within virtual network
 
 - I accessed the Linux VM's NSG on Microsoft Azure and added a new 'inbound security rule' to deny all inbound ICMP traffic. Thus configuring the access control list/firewall. I also set the priority to a lower number (higher priority) ensuring that this rule is followed first.
   ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/3ceaa35e-664e-4154-8ad9-39d4f299f625)
+
+- Finally, to inspect SSH data packets transmission, I filtered traffic by SSH on Wireshark and typed the command 'ssh Linuxuser@51.143.189.179' on PowerShell, entered the password for the Linux VM and connected to its CLI. Whenever I inputted commands like print working directory 'pwd' and 'exit' on the Linux CLI, I observed SSH packets being transmitted between the Windows 10 and Linux VMs.
+  ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/bba75542-7aa0-4b5a-bdf4-de2e03143650)
+  ![image](https://github.com/patrickoigwilo/AzureNSGs-NetworkProtocols/assets/162601853/0b8326d6-d418-4a8b-b814-29f185ab5942)
+
+
